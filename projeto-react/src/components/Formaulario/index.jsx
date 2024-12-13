@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Formulario =() =>{
     let [materiaA, setmateriaA] = useState(0);
     let [materiaB, setmateriaB] = useState(0);
     let [materiaC, setmateriaC] = useState(0);
+
+    useEffect(() =>{
+        console.log('O estado mudou')
+    });
     
     const renderizaResultado = () =>{
         const soma = materiaA + materiaB + materiaC
